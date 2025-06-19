@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Event Managment App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [Django](https://www.djangoproject.com/) and [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `docker-compose up --build`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [Frontend](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As well as [Backend](http://localhost:8000/api/events/) to watch backend!
 
-### `npm test`
+# About Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I created this project using [Django](https://www.djangoproject.com/) , where I utilized its built-in utilities. I tried to add strict typing to make the project more robust and safe for future changes. The project includes both a backend and a frontend part. Both have the same full functionality, but with the frontend you can visually see everything happening through the browser.
 
-### `npm run build`
+You can:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Register
+- View events
+- Create your own events
+- Edit or delete your events
+- Subscribe to other users' events and receive email notifications
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I decided not to use a real email client, so in the `settings.py` file at the root of the Django project, you can find settings for a real email client at the end of the file. Instead, I used a virtual email backend that sends similar emails to the console when a user subscribes to an event.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Also, I added `filtering functionality`. Due to tight deadlines, I did not add it to the frontend, but it works perfectly through the browser using queries like `/api/events/?title=Web` and similar.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+It was interesting to build such a project. Overall, the development took me about 8-9 hours, with 2 of those hours spent on the frontend.
