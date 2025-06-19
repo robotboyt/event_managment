@@ -1,0 +1,27 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Виртуальное окружение
+env/
+venv/
+
+# Базы данных
+db.sqlite3
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.mo
+*.swp
+*~
+*.sqlite3
+
+# VSCode, PyCharm, другие IDE
+.vscode/
+.idea/
+
+# Docker
+*.env
